@@ -12,7 +12,7 @@ $(document).ready( function() {
 
   $('#contact_form').on("submit",function(){
     form_submission.url = window.location.href;
-    form_submission.email = $('#Email').value;
+    form_submission.email = document.getElementById("Email").value;
     jsonString = JSON.stringify(form_submission);
     console.log(jsonString);
   });
