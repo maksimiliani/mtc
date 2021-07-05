@@ -14,6 +14,6 @@ $(document).ready( function() {
     form_submission.url = window.location.href;
     form_submission.email = document.getElementById("Email").value;
     jsonString = JSON.stringify(form_submission);
-    console.log(jsonString);
+    console.log(form_submission);
   });
 });
