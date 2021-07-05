@@ -19,7 +19,7 @@ $(document).ready( function() {
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function() {
       if(xhr.readyState == XMLHttpRequest.DONE && xhr.status == 200) {
-          console.console.log("form_submitted");
+          console.log("form_submitted");
       }
     }
     xhr.send(form_submission);
