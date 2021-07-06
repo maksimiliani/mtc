@@ -8,12 +8,12 @@ $(document).ready( function() {
   form_submission.state="";
   form_submission.campaignId="68969";
   form_submission.vendorId="6000";
-  //var jsonString;
+  var jsonString;
 
   $('#contact_form').on("submit",function(){
     form_submission.url = window.location.href;
     form_submission.email = document.getElementById("Email").value;
-    //jsonString = JSON.stringify(form_submission);
+    jsonString = JSON.stringify(form_submission);
     var xhr = new XMLHttpRequest();
     xhr.open("POST", 'http://service.topbutton.com/landing/register', true);
     xhr.setRequestHeader("Content-type", "application/json");
@@ -22,6 +22,6 @@ $(document).ready( function() {
           console.log("form_submitted");
       }
     }
-    xhr.send(form_submission);
+    xhr.send(jsonString);
   });
 });
