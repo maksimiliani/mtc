@@ -11,7 +11,7 @@ $('#contact_form').on("submit", function () {
     var jsonString;
 
     jsonString = JSON.stringify(form_submission);
-    //console.log(jsonString);
+    console.log(jsonString);
 
     $.ajax({
         type: "POST",
