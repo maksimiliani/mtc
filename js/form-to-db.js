@@ -16,7 +16,7 @@ $(document).ready( function() {
 
     $.ajax({
         type: "POST",
-        url: 'http://service.topbutton.com/landing/register',
+        url: 'https://service.topbutton.com/landing/register',
         data: jsonString,
         headers: {
             "Content-type": "application/json",
