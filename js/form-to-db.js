@@ -17,11 +17,11 @@ $(document).ready( function() {
     $.ajax({
         type: "POST",
         url: 'https://service.topbutton.com/landing/register',
+        crossDomain: true,
         data: jsonString,
         headers: {
             "Content-type": "application/json",
         }
-
     });
   });
 });
