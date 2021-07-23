@@ -1,5 +1,5 @@
 $(document).ready( function() {
-
+   var alex = 1;	
   function json_submission(jsonString_var) {
     $.ajax({
         type: "POST",
