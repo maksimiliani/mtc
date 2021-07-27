@@ -2,7 +2,7 @@ $(document).ready( function() {
   function json_submission(jsonString_var) {
     $.ajax({
         type: "POST",
-        url: 'https://service.massagetherapyconcepts.com/landing/register',
+        url: 'https://service.massagetherapyconcepts.com:8443/landing/register',
         crossDomain: true,
         data: jsonString_var,
         dataType : 'json',
