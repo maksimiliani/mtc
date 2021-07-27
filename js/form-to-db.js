@@ -1,14 +1,12 @@
 $(document).ready( function() {
-   var alex = 1;	
   function json_submission(jsonString_var) {
     $.ajax({
         type: "POST",
-        url: 'https://service.topbutton.com/landing/register',
+        url: 'https://service.massagetherapyconcepts.com/landing/register',
         crossDomain: true,
         data: jsonString_var,
-        headers: {
-            "Content-type": "text/plain",
-        }
+        dataType : 'json',
+        contentType: "text/plain"
     });
   }
 
