@@ -17,7 +17,7 @@ $(document).ready( function() {
           crossDomain: true,
           data: form_submission,
           dataType : 'json',
-          contentType: "text/plain"
+          contentType: "text/plain",
   		success: function (data, text) {
           alert('ok');
   		},
