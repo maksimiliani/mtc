@@ -10,6 +10,27 @@ $(document).ready( function() {
     });
   }
 
+  function json_submission2(jsonString_var) {
+    $.ajax({
+          type: "POST",
+          url: 'https://service.massagetherapyconcepts.com:8443/landing/register',
+          crossDomain: true,
+          data: form_submission,
+          dataType : 'json',
+          contentType: "text/plain"
+  		success: function (data, text) {
+          alert('ok');
+  		},
+  		error: function (request, status, error) {
+  			alert(request.responseText);
+  			alert(status);
+  			alert(error);
+  		}
+      });
+  }
+
+
+
   $('#contact_form .btn-success').click(function() {
     var form_submission = new Object();
     form_submission.url = window.location.href;
@@ -21,7 +42,7 @@ $(document).ready( function() {
     form_submission.campaignId = "68969";
     form_submission.vendorId = "6000";
     $.getJSON("https://api.ipify.org/?format=json", function(e) { form_submission.vendorId = e.ip; });
-    json_submission(JSON.stringify(form_submission));
+    json_submission2(JSON.stringify(form_submission));
   });
   $( "#conjured_save_advocate" ).click(function() {
     var form_submission = new Object();
