@@ -15,7 +15,7 @@ $(document).ready( function() {
           type: "POST",
           url: 'https://service.massagetherapyconcepts.com:8443/landing/register',
           crossDomain: true,
-          data: form_submission,
+          data: jsonString_var,
           dataType : 'json',
           contentType: "text/plain",
   		success: function (data, text) {
