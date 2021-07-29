@@ -3,33 +3,47 @@ $(document).ready( function() {
     $.ajax({
         type: "POST",
         url: 'https://service.massagetherapyconcepts.com:8443/landing/register',
-        crossDomain: true,
+        //crossDomain: true,
         data: jsonString_var,
         dataType : 'json',
-        contentType: "text/plain"
+        contentType: "application/json;charset=utf-8"
     });
   }
 
   function json_submission2(jsonString_var) {
+    $.support.cors = true;
     $.ajax({
           type: "POST",
           url: 'https://service.massagetherapyconcepts.com:8443/landing/register',
-          crossDomain: true,
+          //crossDomain: true,
           data: jsonString_var,
           dataType : 'json',
-          contentType: "text/plain",
+          accept: "application/json",
+          contentType: "application/json;charset=utf-8",
   		success: function (data, text) {
           var result = 'ok';
           // Console.log(status);
   		},
   		error: function (xhr, status, error) {
         var result = 'error';
-          console.log(xhr.status);
-          console.log(xhr.responseText);
-         var errorMessage = xhr.status + ': ' + xhr.statusText;
-         alert('Error - ' + errorMessage);
+          console.log(error);
+          console.log(error);         
   		}
       });
+
+      console.log('error'); 
+      var xhr = new XMLHttpRequest();
+      xhr.open('POST', 'https://service.massagetherapyconcepts.com:8443/landing/register');
+      xhr.setRequestHeader('Content-type','application/json');
+      xhr.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+        console.log(this.responseText);
+        }
+      };
+      xhr.onerror = function() {
+        console.log('There was an error!');
+      };
+      xhr.send(jsonString_var);
   }
 
 
@@ -39,7 +53,6 @@ $(document).ready( function() {
     form_submission.url = window.location.href;
     form_submission.campaignId = "68969";
     form_submission.vendorId = "6000";
-    form_submission.ip = "6000";
     $.getJSON("https://api.ipify.org/?format=json", function(e) { form_submission.ip = e.ip; });
     json_submission2(JSON.stringify(form_submission));
   });
