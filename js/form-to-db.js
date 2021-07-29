@@ -24,8 +24,8 @@ $(document).ready( function() {
   		},
   		error: function (xhr, status, error) {
         var result = 'error';
-         Console.log(xhr.status);
-         Console.log(xhr.responseText);
+          console.log(xhr.status);
+          console.log(xhr.responseText);
          var errorMessage = xhr.status + ': ' + xhr.statusText;
          alert('Error - ' + errorMessage);
   		}
