@@ -16,7 +16,6 @@ $(document).ready( function() {
     form_submission.email = document.getElementById("Email").value;
     form_submission.campaignId = "68969";
     form_submission.vendorId = "6000";
-    $.getJSON("https://api.ipify.org/?format=json", function(e) { form_submission.ip = e.ip; });
     json_submission(JSON.stringify(form_submission));
   });
 
@@ -27,18 +26,15 @@ $(document).ready( function() {
     form_submission.name = document.getElementById("conjured_referral_email").value;
     form_submission.campaignId = "68969";
     form_submission.vendorId = "6000";
-    $.getJSON("https://api.ipify.org/?format=json", function(e) { form_submission.ip = e.ip; });
     json_submission(JSON.stringify(form_submission));
   });
-  
+
   $( "#conjured_send_email_button" ).click(function() {
     var form_submission = new Object();
     form_submission.url = window.location.href;
     form_submission.email = document.getElementById("conjured_emails").value;
     form_submission.campaignId = "68969";
     form_submission.vendorId = "6000";
-    $.getJSON("https://api.ipify.org/?format=json", function(e) { form_submission.ip = e.ip; });
     json_submission(JSON.stringify(form_submission));
   });
 });
-
