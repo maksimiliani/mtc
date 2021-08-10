@@ -10,7 +10,7 @@ $(document).ready( function() {
     });
   }
 
-  $('#contact_form .btn-success').click(function() {
+  $('#contact_form').submit(function() {
     var form_submission = new Object();
     form_submission.url = window.location.href;
     form_submission.email = document.getElementById("Email").value;
