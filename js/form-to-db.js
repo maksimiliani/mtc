@@ -8,7 +8,7 @@ $(document).ready( function() {
         dataType : 'json',
         contentType: "text/plain",
         complete: function (result) {
-            if(formname != '')
+            if(Boolean(formName))
                 $(formName).submit();
         }
     });
