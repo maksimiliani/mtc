@@ -48,8 +48,8 @@ $(document).ready( function() {
         e.preventDefault();
         var form_submission = new Object();
         form_submission.url = window.location.href;
-        form_submission.email = $('.shogun-form-box input[placeholder="Email"]').value;
-        form_submission.name = $('.shogun-form-box input[placeholder="Name"]').value;
+        form_submission.email = $('.shogun-form-box input[placeholder="Email"]').val();
+        form_submission.name = $('.shogun-form-box input[placeholder="Name"]').val();
         form_submission.campaignId = "68969";
         form_submission.vendorId = "6000";
         json_submission(JSON.stringify(form_submission), ".shogun-form-box");
