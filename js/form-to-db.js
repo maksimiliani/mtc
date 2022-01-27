@@ -13,16 +13,33 @@ $(document).ready(function () {
         }
     });
   }
-
-    $('#contact_form .btn-success').click(function (e) {
+    // warranty & contact
+    $('.realForm button.submitButton').click(function (e) {
     e.preventDefault();
     var mtc_data_form = new Object();
-    mtc_data_form.url = window.location.href;
-    mtc_data_form.email = document.getElementById("Email").value;
-    mtc_data_form.campaignId = "68969";
-    mtc_data_form.vendorId = "6000";
-    mtc_form_submit(JSON.stringify(mtc_data_form), '#contact_form');
-  });
+        mtc_data_form.url = window.location.href;
+        mtc_data_form.email = $("input[data-form-type='email']").val();
+        mtc_data_form.firstName = $("input[title='First Name']").val();
+        mtc_data_form.lastName = $("input[title='Last Name']").val();
+        mtc_data_form.phonenumber = $("input[title='Phone']").val();
+        mtc_data_form.mobile = $("input[title='Mobile Phone']").val();
+        mtc_data_form.campaignId = "68969";
+        mtc_data_form.vendorId = "6000";
+        mtc_form_submit(JSON.stringify(mtc_data_form), '.realForm');
+    });
+
+
+    $('#contact_form .btn-success').click(function (e) {
+        e.preventDefault();
+        var mtc_data_form = new Object();
+        mtc_data_form.url = window.location.href;
+        mtc_data_form.email = document.getElementById("Email").value;
+        mtc_data_form.campaignId = "68969";
+        mtc_data_form.vendorId = "6000";
+        mtc_form_submit(JSON.stringify(mtc_data_form), '#contact_form');
+    });
+
+
 
     $("#conjured_save_advocate").click(function (e) {
      e.preventDefault();
