@@ -16,7 +16,7 @@ $(document).ready(function () {
 
     // contact page form
     $('#contact_form').submit(function (e) {
-        e.preventDefault();
+        //e.preventDefault();
         var mtc_data_form = new Object();
         mtc_data_form.url = window.location.href;
         mtc_data_form.email = $("#ContactFormEmail").val();
@@ -25,13 +25,13 @@ $(document).ready(function () {
         mtc_data_form.mobile = $("#ContactFormPhone").val();
         mtc_data_form.campaignId = "6000";
         mtc_data_form.vendorId = "6000";
-        mtc_form_submit(JSON.stringify(mtc_data_form), '#contact_form');
+        mtc_form_submit(JSON.stringify(mtc_data_form), null);
     });
 
     // warranty
     $('form.shogun-form-box').submit(function (e) {
-    e.preventDefault();
-    var mtc_data_form = new Object();
+        //e.preventDefault();
+        var mtc_data_form = new Object();
         mtc_data_form.url = window.location.href;
         mtc_data_form.email = $("input[placeholder='Email']").val();
         mtc_data_form.firstName = $("input[placeholder='First name']").val();
@@ -44,7 +44,7 @@ $(document).ready(function () {
         mtc_data_form.city = $("input[placeholder='Zip Code']").val();
         mtc_data_form.campaignId = "6000";
         mtc_data_form.vendorId = "6000";
-        mtc_form_submit(JSON.stringify(mtc_data_form), 'form.shogun-form-box');
+        mtc_form_submit(JSON.stringify(mtc_data_form), null);
     });
 
 
@@ -60,25 +60,25 @@ $(document).ready(function () {
 
     ///Refer A Friend
     $("#conjured_save_advocate").click(function (e) {
-     e.preventDefault();
-    var mtc_data_form = new Object();
-    mtc_data_form.url = window.location.href;
-    mtc_data_form.name = $("#conjured_referral_name").val();
-    mtc_data_form.email = $("#conjured_referral_email").val();
-    mtc_data_form.campaignId = "6000";
-    mtc_data_form.vendorId = "6000";
-    mtc_form_submit(JSON.stringify(mtc_data_form), '#conjured_save_advocate');
+        // e.preventDefault();
+        var mtc_data_form = new Object();
+        mtc_data_form.url = window.location.href;
+        mtc_data_form.name = $("#conjured_referral_name").val();
+        mtc_data_form.email = $("#conjured_referral_email").val();
+        mtc_data_form.campaignId = "6000";
+        mtc_data_form.vendorId = "6000";
+        mtc_form_submit(JSON.stringify(mtc_data_form), null);
   });
 
-    $("#conjured_send_email_button").click(function (e) {
-    e.preventDefault();
-    var mtc_data_form = new Object();
-    mtc_data_form.url = window.location.href;
-    mtc_data_form.email = document.getElementById("conjured_emails").value;
-        mtc_data_form.campaignId = "6000";
-    mtc_data_form.vendorId = "6000";
-    mtc_form_submit(JSON.stringify(mtc_data_form), "#conjured_send_email_button");
-    });
+    //$("#conjured_send_email_button").click(function (e) {
+    //    e.preventDefault();
+    //    var mtc_data_form = new Object();
+    //    mtc_data_form.url = window.location.href;
+    //    mtc_data_form.email = document.getElementById("conjured_emails").value;
+    //        mtc_data_form.campaignId = "6000";
+    //    mtc_data_form.vendorId = "6000";
+    //    mtc_form_submit(JSON.stringify(mtc_data_form), "#conjured_send_email_button");
+    //});
 
     $('.shogun-form-box-submit').click(function (e) {
         var mtc_data_form = new Object();
@@ -87,7 +87,7 @@ $(document).ready(function () {
         mtc_data_form.name = $('.shogun-form-box input[placeholder="Name"]').val();
         mtc_data_form.campaignId = "6000";
         mtc_data_form.vendorId = "6000";
-        mtc_form_submit(JSON.stringify(mtc_data_form), '');
+        mtc_form_submit(JSON.stringify(mtc_data_form), null)
     });
 
     /// footer
