@@ -23,6 +23,7 @@ $(document).ready(function () {
         mtc_data_form.firstName = $("#ContactFormFirstName").val();
         mtc_data_form.lastName = $("#ContactFormLastName").val();
         mtc_data_form.mobile = $("#ContactFormPhone").val();
+        mtc_data_form.comments = $("#ContactFormMessage").val();
         mtc_data_form.campaignId = "6000";
         mtc_data_form.vendorId = "6000";
         mtc_form_submit(JSON.stringify(mtc_data_form), null);
@@ -34,13 +35,15 @@ $(document).ready(function () {
         var mtc_data_form = new Object();
         mtc_data_form.url = window.location.href;
         mtc_data_form.email = $("input[placeholder='Email']").val();
-        mtc_data_form.firstName = $("input[placeholder='First and Last name']").val();
+        mtc_data_form.firstName = $("input[placeholder='First name']").val();
+        mtc_data_form.firstName = $("input[placeholder='Last name']").val();
         mtc_data_form.mobile = $("input[placeholder='Mobile Phone']").val();
         mtc_data_form.address1 = $("input[placeholder='Address']").val();
         mtc_data_form.address2 = $("input[placeholder='Address 2']").val();
         mtc_data_form.state = $("input[placeholder='State']").val();
         mtc_data_form.zip = $("input[placeholder='City']").val();
         mtc_data_form.city = $("input[placeholder='Zip Code']").val();
+        mtc_data_form.comments = $('#s-058c5840-c28b-4e1b-a3f3-17f7843bc653').find(":selected").text();
         mtc_data_form.campaignId = "6000";
         mtc_data_form.vendorId = "6000";
         mtc_form_submit(JSON.stringify(mtc_data_form), null);
