@@ -36,7 +36,7 @@ $(document).ready(function () {
         mtc_data_form.url = window.location.href;
         mtc_data_form.email = $("input[placeholder='Email']").val();
         mtc_data_form.firstName = $("input[placeholder='First name']").val();
-        mtc_data_form.firstName = $("input[placeholder='Last name']").val();
+        mtc_data_form.lastName = $("input[placeholder='Last name']").val();
         mtc_data_form.mobile = $("input[placeholder='Mobile Phone']").val();
         mtc_data_form.address1 = $("input[placeholder='Address']").val();
         mtc_data_form.address2 = $("input[placeholder='Address 2']").val();
